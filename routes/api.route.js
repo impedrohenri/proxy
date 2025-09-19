@@ -13,7 +13,6 @@ router.all("/", async (req, res) => {
   const urlParam = req.query.url;
   const userToken = TOKEN;
 
-  console.log(">>>>", MAIN_ROUTE + urlParam)
 
   if (!urlParam) {
     return res.status(400).json({ error: "URL obrigatória" });

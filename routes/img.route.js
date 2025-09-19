@@ -10,9 +10,7 @@ const SECONDARY_ROUTE = process.env.SECONDARY_ROUTE;
 router.all("/", async (req, res) => {
   const urlParam = req.query.url;
   const userToken = TOKEN;
-
-  console.log(">>>><<<<<<<---", SECONDARY_ROUTE + urlParam)
-
+  
 
   if (!urlParam) {
     return res.status(400).json({ error: "URL obrigatória" });
